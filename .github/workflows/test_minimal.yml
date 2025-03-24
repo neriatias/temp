@@ -11,5 +11,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Echo something
-        run: echo "Hello from minimal workflow!"
+      - name: Upload Test
+        uses: actions/upload-artifact@v3
+        with:
+          name: test
+          path: README.md
